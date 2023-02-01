@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.SignalR.Client;
 HubConnection hubConnection = new HubConnectionBuilder().WithUrl("https://localhost:7133/chathub").Build();
 await hubConnection.StartAsync();
 ConnectionFactory factory = new ConnectionFactory();
-factory.Uri = new Uri("amqps://tgfofbye:pmMAT3zJLy502QwNPqCPqzjhAv2N2ljh@cougar.rmq.cloudamqp.com/tgfofbye");
+factory.Uri = new Uri("your uri");
 using IConnection connection = factory.CreateConnection();
 using IModel channel = connection.CreateModel();
 channel.QueueDeclare("messagequeue", false, false, true);
