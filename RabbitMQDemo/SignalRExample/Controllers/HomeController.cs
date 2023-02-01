@@ -30,7 +30,7 @@ namespace SignalRExample.Controllers
         public IActionResult Chat(User user)
         {
             ConnectionFactory factory = new ConnectionFactory();
-            factory.Uri = new Uri("amqps://tgfofbye:pmMAT3zJLy502QwNPqCPqzjhAv2N2ljh@cougar.rmq.cloudamqp.com/tgfofbye");
+            factory.Uri = new Uri("your uri");
             using IConnection connection = factory.CreateConnection();
             using IModel channel = connection.CreateModel();
             string serializedData = JsonSerializer.Serialize(user);
